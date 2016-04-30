@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Document Steps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>References</th>
+      <th>Order</th>
+      <th>Video</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @document_steps.each do |document_step| %>
+      <tr>
+        <td><%= document_step.references %></td>
+        <td><%= document_step.order %></td>
+        <td><%= document_step.video %></td>
+        <td><%= document_step.description %></td>
+        <td><%= link_to 'Show', document_step %></td>
+        <td><%= link_to 'Edit', edit_document_step_path(document_step) %></td>
+        <td><%= link_to 'Destroy', document_step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Document step', new_document_step_path %>

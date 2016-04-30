@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  references: 
+  order: 1
+  video: MyText
+  description: MyText
+
+two:
+  references: 
+  order: 1
+  video: MyText
+  description: MyText

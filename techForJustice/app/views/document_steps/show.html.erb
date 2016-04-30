@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>References:</strong>
+  <%= @document_step.references %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @document_step.order %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @document_step.video %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @document_step.description %>
+</p>
+
+<%= link_to 'Edit', edit_document_step_path(@document_step) %> |
+<%= link_to 'Back', document_steps_path %>
