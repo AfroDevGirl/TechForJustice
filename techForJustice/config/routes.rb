@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :dependencies
   resources :documents
 
- get '/all_doc_steps'
+ get '/all_doc_steps', to: 'documents#show_all_steps'
 end
