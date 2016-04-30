@@ -10,6 +10,7 @@
     "directories": {
       "lib": "src"
     },
+    "npmAlgorithm": "flat",
     "transpiler": "babel"
   },
   "author": "",

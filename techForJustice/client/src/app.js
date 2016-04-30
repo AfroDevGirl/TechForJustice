@@ -3,8 +3,7 @@ import ko from 'knockout';
 import appTemplate from './app.html!system-text';
 import router from './router';
 
-import 'tfj/components/example-component/';
-import 'tfj/pages/home/';
+import 'bootstrap/dist/css/bootstrap.min.css!';
 
 export default function AppViewModel () {
   this.route = router.currentRoute;

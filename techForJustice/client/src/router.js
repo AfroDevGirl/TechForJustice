@@ -2,6 +2,11 @@ import ko from 'knockout';
 import crossroads from 'crossroads';
 import hasher from 'hasher';
 
+
+import 'tfj/components/example-component/';
+import 'tfj/pages/home/';
+import 'tfj/pages/form/';
+
 class Router {
     constructor(config) {
         this.currentRoute = ko.observable({});
