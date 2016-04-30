@@ -1,7 +1,7 @@
 class CreateDocumentSteps < ActiveRecord::Migration
   def change
     create_table :document_steps do |t|
-      t.document :references
+      t.references :document
       t.integer :order
       t.text :video
       t.text :description

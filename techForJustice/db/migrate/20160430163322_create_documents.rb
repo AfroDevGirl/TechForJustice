@@ -4,7 +4,7 @@ class CreateDocuments < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.string :type
-      t.genre :references
+      t.references :genre
 
       t.timestamps null: false
     end
