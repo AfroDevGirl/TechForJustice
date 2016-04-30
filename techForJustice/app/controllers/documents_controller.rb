@@ -10,9 +10,21 @@ class DocumentsController < ApplicationController
   # GET /documents/1
   # GET /documents/1.json
   def show
+	  p params
+	  @this_document=Document.find(params[:id])
+	  #@document_all_steps = DocumentStep.all_steps(@document_id)
+	  @document_all_steps = @this_document.document_steps	
+	  p @document_all_steps
+		@document_all_steps.as_json
   end
+  def all_doc_steps
+   	@this_document=Document.find(params[:id])
+	#@document_all_steps = DocumentStep.all_steps(@document_id)
+	@document_all_steps = @this_document.document_steps
 
-  # GET /documents/new
+  end
+  
+# GET /documents/new
   def new
     @document = Document.new
   end

@@ -14,11 +14,11 @@
   <strong>Type:</strong>
   <%= @document.type %>
 </p>
-
-<p>
-  <strong>References:</strong>
-  <%= @document.references %>
-</p>
+<% @document_all_steps.each do |step| %>
+  <p>
+    <%= step.description %>
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_document_path(@document) %> |
 <%= link_to 'Back', documents_path %>
