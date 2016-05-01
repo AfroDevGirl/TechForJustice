@@ -1,0 +1,11 @@
+<h1>Tech for Justice</h1>
+<h2 data-bind="text: name"></h2>
+<ul>
+	<!-- ko foreach: steps -->
+	<span data-bind="text: $parent.activeStep(), click: function(){ console.log($parent, $parent.activeStep())}"></span>
+<span data-bind="if: $index == $parent.activeStep"><li>Place holder for step <span data-bind="text: $index"></span></li></span>
+<!-- /ko -->
+</ul>
+<button class="btn btn-default" data-bind="click: previous" type="button">Previous</button>
+
+<button class="btn btn-default" data-bind="click: next" type="button">Next</button>
