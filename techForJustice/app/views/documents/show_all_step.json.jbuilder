@@ -1,0 +1,1 @@
+json.extract! @document_all_steps, :id,:document_id,:order,:video,:description,:created_at,:updated_at
