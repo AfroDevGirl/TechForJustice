@@ -4,7 +4,8 @@ class DependenciesController < ApplicationController
   # GET /dependencies
   # GET /dependencies.json
   def index
-    @dependencies = Dependency.all
+    step = DocumentStep.find(params[:document_step_id])
+    @dependencies = step.dependencies
   end
 
   # GET /dependencies/1

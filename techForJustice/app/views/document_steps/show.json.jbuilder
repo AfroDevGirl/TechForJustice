@@ -1,1 +1,1 @@
-json.extract! @document_step, :id, :references, :order, :video, :description, :created_at, :updated_at
+json.extract! @document_step, :id, :document_id, :order, :video, :description, :created_at, :updated_at
