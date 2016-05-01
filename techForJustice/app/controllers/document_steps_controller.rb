@@ -4,7 +4,9 @@ class DocumentStepsController < ApplicationController
   # GET /document_steps
   # GET /document_steps.json
   def index
-    @document_steps = DocumentStep.all
+    #@document_steps = DocumentStep.all
+    @document_step_dependencies = DocumentStep.first.dependencies
+    render json: @document_step_dependencies
   end
 
   # GET /document_steps/1

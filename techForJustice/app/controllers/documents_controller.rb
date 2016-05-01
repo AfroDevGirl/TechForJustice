@@ -4,23 +4,21 @@ class DocumentsController < ApplicationController
   # GET /documents
   # GET /documents.json
   def index
-    @documents = Document.all
+    @doc_steps = Document.first.document_steps
+    @doc_step_requirements = ""
+    render json: @doc_steps
   end
 
   # GET /documents/1
   # GET /documents/1.json
   def show
-	  p params
-	  @this_document=Document.find(params[:id])
-	  #@document_all_steps = DocumentStep.all_steps(@document_id)
-	  @document_all_steps = @this_document.document_steps	
-	  p @document_all_steps
-		@document_all_steps.as_json
   end
   def all_doc_steps
    	@this_document=Document.find(params[:id])
-	#@document_all_steps = DocumentStep.all_steps(@document_id)
-	@document_all_steps = @this_document.document_steps
+   	#p @this_document
+  	@document_all_steps = @this_document.document_steps
+	  render json: @document_all_steps
+	
 
   end
   
@@ -81,6 +79,10 @@ class DocumentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def document_params
-      params.require(:document).permit(:name, :description, :type, :references)
+      params.require(:document).permit(:name, :description, :type, :references, document_steps_attributes: [:document_id,:order,:video,:description])
+    end
+    
+    def step_params
+      params.require(:id).permit(:order,:video,:description)
     end
 end

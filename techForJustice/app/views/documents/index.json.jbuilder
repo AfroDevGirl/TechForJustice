@@ -1,4 +1,4 @@
 json.array!(@documents) do |document|
-  json.extract! document, :id, :name, :description, :type, :references
+  json.extract! document, :id, :name, :description, :type
   json.url document_url(document, format: :json)
 end
