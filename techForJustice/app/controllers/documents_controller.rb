@@ -4,23 +4,24 @@ class DocumentsController < ApplicationController
   # GET /documents
   # GET /documents.json
   def index
-    @doc_steps = Document.first.document_steps
-    @doc_step_requirements = ""
-    render json: @doc_steps
+    # @doc_steps = Document.first.document_steps
+    # @doc_step_requirements = ""
+    # render json: @doc_steps
+    @documents = Document.all
   end
 
   # GET /documents/1
   # GET /documents/1.json
   def show
   end
-  def all_doc_steps
-   	@this_document=Document.find(params[:id])
-   	#p @this_document
-  	@document_all_steps = @this_document.document_steps
-	  render json: @document_all_steps
+  # def all_doc_steps
+  # 	@this_document=Document.find(params[:id])
+  # 	#p @this_document
+  # 	@document_all_steps = @this_document.document_steps
+	 # render json: @document_all_steps
 	
 
-  end
+  # end
   
 # GET /documents/new
   def new
